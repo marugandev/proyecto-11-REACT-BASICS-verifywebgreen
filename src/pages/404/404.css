@@ -1,0 +1,9 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gr-gap-large);
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}

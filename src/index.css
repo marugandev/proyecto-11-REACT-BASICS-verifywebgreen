@@ -1,0 +1,68 @@
+:root {
+  /* Tipography */
+  --gr-font-family-primary: Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  --gr-font-family-monospace: "Courier New", Courier, monospace;
+  --gr-line-height: 1.5;
+  --gr-font-weight-normal: 400;
+  --gr-font-weight-bold: 700;
+
+  /* Colors */
+  --screamin-green: #60f160;
+  --prussian-blue: #213547;
+  --imperial-red: #f93943;
+  --cool-gray: #8c86aa;
+  --ghost-white: #f2f5ff;
+
+  --gr-text-color: var(--prussian-blue);
+  --gr-text-color-secondary: var(--cool-gray);
+  --gr-text-color-error: var(--imperial-red);
+  --gr-text-color-accent: var(--screamin-green);
+  --gr-background-color: var(--ghost-white);
+  --gr-background-color-secondary: var(--cool-gray);
+  --gr-background-color-input: var(--prussian-blue);
+  --gr-background-color-error: var(--imperial-red);
+
+  /* Buttons */
+  --gr-button-primary: var(--screamin-green);
+  --gr-button-secondary: var(--cool-gray);
+  --gr-button-danger: var(--imperial-red);
+
+  /* Spacings and borders */
+  --gr-spacing-small: 8px;
+  --gr-spacing-medium: 16px;
+  --gr-spacing-large: 32px;
+
+  --gr-border-radius: 12px;
+  --gr-border: 2px solid var(--gr-text-color-secondary);
+
+  /* Paddings, margins and gaps */
+  --gr-padding-small: var(--gr-spacing-small);
+  --gr-padding-medium: var(--gr-spacing-medium);
+  --gr-padding-large: var(--gr-spacing-large);
+
+  --gr-margin-small: var(--gr-spacing-small);
+  --gr-margin-medium: var(--gr-spacing-medium);
+  --gr-margin-large: var(--gr-spacing-large);
+
+  --gr-gap-small: var(--gr-spacing-small);
+  --gr-gap-medium: var(--gr-spacing-medium);
+  --gr-gap-large: var(--gr-spacing-large);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

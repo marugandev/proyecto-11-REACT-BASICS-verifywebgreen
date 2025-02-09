@@ -1,0 +1,19 @@
+.about {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gr-gap-medium);
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@media (max-width: 570px) {
+  .about {
+    margin-bottom: 25px;
+    text-wrap: balance;
+  }
+}

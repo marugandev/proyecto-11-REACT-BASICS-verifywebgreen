@@ -1,0 +1,30 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+.footer-nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gr-spacing-small);
+}
+
+.footer-nav span {
+  color: var(--gr-text-color-secondary);
+}
+
+.footer-nav a {
+  font-weight: 500;
+  color: var(--gr-text-color-secondary);
+  transition: all 0.4s ease-in-out;
+}
+.footer-nav a:hover {
+  color: var(--gr-text-color-accent);
+}
+
+@media (max-width: 570px) {
+  .footer-nav a {
+    font-size: 12px;
+  }
+}

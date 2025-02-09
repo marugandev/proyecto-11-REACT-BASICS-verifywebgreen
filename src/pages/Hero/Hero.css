@@ -1,0 +1,53 @@
+/* .hero {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+ */
+
+.hero-title {
+  font-size: 4.2em;
+  color: var(--gr-text-color);
+  display: block;
+  white-space: nowrap;
+  font-family: var(--gr-font-family-monospace);
+  border-right: 4px solid var(--gr-text-color);
+  width: 18ch;
+  animation: typing 2s steps(18), blink 1s step-end infinite alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 18ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.hero-title > span {
+  color: var(--gr-text-color-accent);
+}
+
+@media (max-width: 740px) {
+  .hero-title {
+    font-size: 3.2em;
+  }
+}
+
+@media (max-width: 570px) {
+  .hero-title {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.85em;
+  }
+}

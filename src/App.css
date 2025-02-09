@@ -1,0 +1,18 @@
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gr-spacing-medium);
+  background-color: var(--gr-background-color);
+  font-family: var(--gr-font-family-primary);
+  line-height: var(--gr-line-height);
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: var(--gr-spacing-small);
+  }
+}
