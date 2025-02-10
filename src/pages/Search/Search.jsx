@@ -26,7 +26,7 @@ const Search = () => {
 
   const handleCancel = () => {
     handleCancelReq();
-    console.log("Cancel");
+    /*     console.log("Cancel"); */
     setPage("");
     setLastUrl(null);
     navigate("/search");

@@ -21,7 +21,7 @@ const useFetch = () => {
     controllerRef.current = abortController;
 
     const backServerUrl = import.meta.env.VITE_BACKEND_SERVER_URL || "";
-    console.log("VITE_BACKEND_SERVER_URL:", backServerUrl);
+    /*   console.log("VITE_BACKEND_SERVER_URL:", backServerUrl); */
 
     try {
       const res = await fetch(
@@ -53,7 +53,7 @@ const useFetch = () => {
   const handleCancelReq = () => {
     if (controllerRef.current) {
       controllerRef.current.abort();
-      console.log("Request aborted");
+      /*       console.log("Request aborted"); */
       setMessage("Request cancelled");
       setData(null);
       setError(null);
