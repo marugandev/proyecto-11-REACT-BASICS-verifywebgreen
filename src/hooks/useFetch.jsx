@@ -24,6 +24,7 @@ const useFetch = () => {
     const backendServerUrl = isProduction
       ? import.meta.env.VITE_BACKEND_SERVER_URL
       : "/api";
+    console.log("backendServer:", backendServerUrl);
 
     if (isProduction && !backendServerUrl)
       throw new Error(
@@ -32,7 +33,7 @@ const useFetch = () => {
 
     try {
       const res = await fetch(
-        `${backendServerUrl}/api/site?url=${encodeURIComponent(url)}`,
+        `${backendServerUrl}/site?url=${encodeURIComponent(url)}`,
         {
           signal: abortController.signal
         }
