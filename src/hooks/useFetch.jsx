@@ -20,24 +20,10 @@ const useFetch = () => {
     const abortController = new AbortController();
     controllerRef.current = abortController;
 
-    const isProduction = import.meta.env.MODE === "production";
-    const backendServerUrl = isProduction
-      ? import.meta.env.VITE_BACKEND_SERVER_URL
-      : "/api";
-    console.log("backendServer:", backendServerUrl);
-
-    if (isProduction && !backendServerUrl)
-      throw new Error(
-        "Error: VITE_BACKEND_SERVER_URL is not defined in .env.production"
-      );
-
     try {
-      const res = await fetch(
-        `${backendServerUrl}/site?url=${encodeURIComponent(url)}`,
-        {
-          signal: abortController.signal
-        }
-      );
+      const res = await fetch(`/site?url=${encodeURIComponent(url)}`, {
+        signal: abortController.signal
+      });
 
       if (!res.ok) throw new Error(`Error: ${res.status} | ${res.statusText}`);
 
