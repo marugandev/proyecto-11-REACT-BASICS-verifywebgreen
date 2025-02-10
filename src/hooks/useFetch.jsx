@@ -20,10 +20,16 @@ const useFetch = () => {
     const abortController = new AbortController();
     controllerRef.current = abortController;
 
+    const backServerUrl = import.meta.env.VITE_BACKEND_SERVER_URL || "";
+    console.log("VITE_BACKEND_SERVER_URL:", backServerUrl);
+
     try {
-      const res = await fetch(`/site?url=${encodeURIComponent(url)}`, {
-        signal: abortController.signal
-      });
+      const res = await fetch(
+        `${backServerUrl}/site?url=${encodeURIComponent(url)}`,
+        {
+          signal: abortController.signal
+        }
+      );
 
       if (!res.ok) throw new Error(`Error: ${res.status} | ${res.statusText}`);
 
