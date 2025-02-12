@@ -12,7 +12,6 @@
   flex-wrap: wrap;
   gap: var(--gr-padding-small);
   text-align: left;
-  transition: transform 0.4s ease-in-out;
 }
 
 .data-details-list li {
@@ -20,23 +19,21 @@
   cursor: default;
 }
 
-.data-details-list li .tooltip {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /*   width: 100%; */
-  max-width: 500px;
-  min-width: 300px;
-  background-color: var(--gr-background-color-secondary);
-  color: var(--ghost-white);
-  padding: var(--gr-padding-small);
-  border-radius: var(--gr-border-radius);
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  z-index: 999;
+.data-details-list li:has(span) {
+  cursor: pointer;
 }
 
-.data-details-list li:hover .tooltip {
-  opacity: 1;
+.data-details-list span {
+  color: var(--gr-text-color-secondary);
+}
+
+.data-details-list .tooltip {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.data-details-list .tooltip.open {
+  max-height: 48px;
 }

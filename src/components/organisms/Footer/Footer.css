@@ -24,7 +24,16 @@
 }
 
 @media (max-width: 570px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer {
+    position: relative;
+  }
   .footer-nav a {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

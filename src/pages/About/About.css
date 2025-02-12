@@ -11,8 +11,13 @@
   animation: fadeIn 0.4s ease-in-out forwards;
 }
 
+.about .button.back {
+  margin-top: 15px;
+}
+
 @media (max-width: 570px) {
   .about {
+    padding: var(--gr-spacing-medium);
     margin-bottom: 25px;
     text-wrap: balance;
   }

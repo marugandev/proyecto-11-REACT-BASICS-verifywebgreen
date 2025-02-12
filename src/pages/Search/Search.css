@@ -51,8 +51,14 @@
   animation: fadeIn 0.4s ease-in-out forwards;
 }
 
+@media (max-width: 570px) {
+  main {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 400px) {
   .search {
-    padding: var(--gr-spacing-small);
+    padding: var(--gr-spacing-medium);
   }
 }
